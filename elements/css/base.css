@@ -1,0 +1,12 @@
+.canvas {
+    -fx-background-color: #000000;
+}
+
+.topbarContent {
+    -fx-text-fill: #E6CA83;
+    -fx-font-weight: 900;
+    -fx-font-style: italic;
+    -fx-fill: #E6CA83;
+}
+
+/* TODO: MAKE HOVERSTATE FOR TOP RIGHT BUTTONS
