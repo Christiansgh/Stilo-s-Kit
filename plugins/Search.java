@@ -1,4 +1,4 @@
-package Plugins;
+package plugins;
 
 public class Search {
     

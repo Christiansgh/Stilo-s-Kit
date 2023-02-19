@@ -5,6 +5,7 @@ import elements.resources.Resources;
 import javafx.scene.layout.StackPane;
 import javafx.scene.shape.SVGPath;
 import javafx.scene.transform.Rotate;
+import utils.Logger;
 
 public class ToggleSidebar {
     private static boolean toggled = false;
@@ -33,11 +34,12 @@ public class ToggleSidebar {
         toggled = !toggled;
         Sidebar.getInstance().setVisible(toggled);
         if (toggled) {
-            rotate.setAngle(180);
+            rotate.setAngle(0);
+            Logger.log("Toggled Sidebar: In\n");
         }
         else {
-            rotate.setAngle(0);
+            rotate.setAngle(180);
+            Logger.log("Toggled Sidebar: Out\n");
         }
     }
-
 }

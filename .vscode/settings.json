@@ -8,6 +8,14 @@
         "c:\\Users\\Christian\\Desktop\\Libaries\\javafx-sdk-19\\lib\\javafx.media.jar",
         "c:\\Users\\Christian\\Desktop\\Libaries\\javafx-sdk-19\\lib\\javafx.swing.jar",
         "c:\\Users\\Christian\\Desktop\\Libaries\\javafx-sdk-19\\lib\\javafx.web.jar",
-        "c:\\Users\\Christian\\Desktop\\Libaries\\javafx-sdk-19\\lib\\javafx-swt.jar"
+        "c:\\Users\\Christian\\Desktop\\Libaries\\javafx-sdk-19\\lib\\javafx-swt.jar",
+        "/home/stilo/Programming/ReferenceLibaries/openjfx/current/sdk/lib/javafx.base.jar",
+        "/home/stilo/Programming/ReferenceLibaries/openjfx/current/sdk/lib/javafx.controls.jar",
+        "/home/stilo/Programming/ReferenceLibaries/openjfx/current/sdk/lib/javafx.fxml.jar",
+        "/home/stilo/Programming/ReferenceLibaries/openjfx/current/sdk/lib/javafx.graphics.jar",
+        "/home/stilo/Programming/ReferenceLibaries/openjfx/current/sdk/lib/javafx.media.jar",
+        "/home/stilo/Programming/ReferenceLibaries/openjfx/current/sdk/lib/javafx.swing.jar",
+        "/home/stilo/Programming/ReferenceLibaries/openjfx/current/sdk/lib/javafx.web.jar",
+        "/home/stilo/Programming/ReferenceLibaries/openjfx/current/sdk/lib/javafx-swt.jar"
     ]
 }

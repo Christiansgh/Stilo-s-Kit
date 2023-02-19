@@ -38,6 +38,12 @@ import run.Initializer;
  * - activation key
  * - mode and what keybinds changes into what
  * - customization for mode & what is displayed
+ * 
+ * Logging: 
+ * Add all the logs to an array.
+ * When executing the Open window method
+ *  - Clear the window.
+ *  - Populate it with the array of logs (text).
  */
 
 public class Main extends Application {

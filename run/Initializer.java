@@ -1,13 +1,20 @@
 package run;
 
+import elements.logwindow.LogWindow;
 import elements.resources.Resources;
+import elements.resources.box.BoxFactory;
+import elements.resources.box.BoxFactory.boxTypeEnum;
 import elements.sidebar.Sidebar;
+import elements.sidebar.SidebarIcons;
 import elements.topbar.Topbar;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import utils.Logger;
 
 /*
  * Initializes / updates the state of the app.
@@ -15,27 +22,29 @@ import javafx.stage.StageStyle;
 
 public class Initializer {
     public static void initializeStage(Stage stage) {
-        //create stage/window
+        // create stage/window
         stage = new Stage(StageStyle.UNDECORATED);
-        
-        //set the app name
+
+        // set the app name
         stage.setTitle("Stilo's Kit");
 
         stage.getIcons().add(Resources.getLogoApplication(20, 20));
-        
-        //run initialization
-        AnchorPane root = new AnchorPane(Sidebar.getInstance(), Topbar.getInstance());
 
-        //
-        //
-        //execute code HERE
-        //
-        //
+        // run initialization
+        AnchorPane root = new AnchorPane(Sidebar.getInstance(), Topbar.getInstance(), LogWindow.getInstance());
+
+        Circle toggleLogWindow = Resources.getButtonTopbar();
+        toggleLogWindow.setOnMouseClicked(e -> LogWindow.toggleLogWindow());
+        SidebarIcons.addSidebarIcon(toggleLogWindow);
+
+        AnchorPane.setTopAnchor(LogWindow.getInstance(), 23.0);
         
-        //makes it so you don't tab out when clicking, acting like an overlay.
+        // execute code HERE
+
+        // makes it so you don't tab out when clicking, acting like an overlay.
         stage.setAlwaysOnTop(true);
 
-        //make scene. Set nonsidebar content as invisible.
+        // make scene. Set nonsidebar content as invisible.
         Scene scene = new Scene(root);
         scene.setFill(Color.TRANSPARENT);
         stage.initStyle(StageStyle.TRANSPARENT);
