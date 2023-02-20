@@ -1,13 +1,29 @@
 package api;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
+
+import javafx.scene.Node;
 
 public abstract class Plugin {
-    private ImageView pluginImageView;
-    private Image pluginImage;
+    protected boolean isVisible;
+    protected boolean isActive;
+    protected Node pluginIcon;
+    protected Node pluginWindow;
 
-    public Plugin(Image pluginImage, ImageView pluginImageView) {
-        this.pluginImageView = pluginImageView;
-        this.pluginImage = pluginImage;
-    }  
+    public Plugin(boolean isVisible, boolean isActive, Node pluginIcon, Node pluginWindow) {
+        this.isVisible = isVisible;
+        this.isActive = isActive;
+        this.pluginIcon = pluginIcon;
+        this.pluginWindow = pluginWindow;
+    }
+
+    public abstract void toggleVisible();
+    
+    public abstract void toggleActive();
+
+    public abstract boolean isActive();
+
+    public abstract Node getPluginIcon();
+
+    public abstract void setPluginIcon(Node newIcon);
+
+    public abstract void initialize();
 }

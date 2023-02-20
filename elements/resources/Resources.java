@@ -1,8 +1,6 @@
 package elements.resources;
 
 import javafx.scene.image.Image;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
 import javafx.scene.shape.SVGPath;
 
 /*
@@ -21,12 +19,6 @@ public class Resources {
     public static Image getLogoApplication(int sizeX, int sizeY) {
         Image logo = new Image("elements/resources/images/applicationLogo.png");
         return logo;
-    }
-
-    //Buttons
-    public static Circle getButtonTopbar() {
-        Circle button = new Circle(9, Color.web("#E6CA83"));
-        return button;
     }
 
     //Icons

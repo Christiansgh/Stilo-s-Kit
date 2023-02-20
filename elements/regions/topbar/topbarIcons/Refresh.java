@@ -1,8 +1,10 @@
-package elements.topbar.topbarIcons;
+package elements.regions.topbar.topbarIcons;
 
+import elements.plugins.Logger;
 import elements.resources.Resources;
+import elements.resources.factories.CircleFactory;
+import elements.resources.factories.CircleFactory.circleTypeEnum;
 import javafx.scene.layout.StackPane;
-import utils.Logger;
 
 public class Refresh {
     private static StackPane refresh = null;
@@ -10,7 +12,7 @@ public class Refresh {
 
     public static StackPane getInstance() {
         if (refresh == null) {
-            StackPane refresh = new StackPane(Resources.getButtonTopbar(), Resources.getIconRefresh());
+            StackPane refresh = new StackPane(CircleFactory.createCircle(circleTypeEnum.btnTopbar), Resources.getIconRefresh());
             refresh.setOnMouseClicked(e -> refresh());
             return refresh;
         }
@@ -20,6 +22,6 @@ public class Refresh {
 
     public static void refresh() {
         //Needs implementation
-        Logger.log("Refreshed\n");
+        Logger.getInstanceLogger().log("Refreshed\n");
     }
 }

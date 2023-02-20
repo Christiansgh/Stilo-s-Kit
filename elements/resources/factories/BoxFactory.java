@@ -1,4 +1,4 @@
-package elements.resources.box;
+package elements.resources.factories;
 
 import elements.fingerprinting.ScreenBounds;
 import javafx.scene.paint.Color;
@@ -25,8 +25,8 @@ public class BoxFactory {
                 return boxLogging;
 
             case boxSidebar:
-                Rectangle boxSidebar = new Rectangle(30, ScreenBounds.getHeight(), Color.web("#000000"));
-                boxSidebar.setX(ScreenBounds.getWidth()-30);
+                Rectangle boxSidebar = new Rectangle(45, ScreenBounds.getHeight(), Color.web("#000000"));
+                boxSidebar.setX(ScreenBounds.getWidth()-45);
                 return boxSidebar;
 
             case boxTopbar:

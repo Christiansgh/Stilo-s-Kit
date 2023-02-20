@@ -1,11 +1,13 @@
-package elements.topbar.topbarIcons;
+package elements.regions.topbar.topbarIcons;
 
-import elements.sidebar.Sidebar;
+import elements.plugins.Logger;
+import elements.regions.sidebar.Sidebar;
 import elements.resources.Resources;
+import elements.resources.factories.CircleFactory;
+import elements.resources.factories.CircleFactory.circleTypeEnum;
 import javafx.scene.layout.StackPane;
 import javafx.scene.shape.SVGPath;
 import javafx.scene.transform.Rotate;
-import utils.Logger;
 
 public class ToggleSidebar {
     private static boolean toggled = false;
@@ -15,10 +17,9 @@ public class ToggleSidebar {
     
     public static StackPane getInstance() {
         if (toggleSidebar == null) {
-            toggleSidebar = new StackPane(Resources.getButtonTopbar(), icon);
+            toggleSidebar = new StackPane(CircleFactory.createCircle(circleTypeEnum.btnTopbar), icon);
             toggleSidebar.setOnMouseClicked(e -> {
                 toggle();
-                Sidebar.toggleSidebar();
             });
             toggleSidebar.getTransforms().addAll(rotate);
             return toggleSidebar;
@@ -26,20 +27,16 @@ public class ToggleSidebar {
         return toggleSidebar;
     }
 
-    public static boolean isToggled() {
-        return toggled;
-    }
-
     public static void toggle() {
         toggled = !toggled;
-        Sidebar.getInstance().setVisible(toggled);
+        Sidebar.getInstanceSidebar().setVisible(toggled);
         if (toggled) {
             rotate.setAngle(0);
-            Logger.log("Toggled Sidebar: In\n");
+            Logger.getInstanceLogger().log("Hid the sidebar\n");
         }
         else {
             rotate.setAngle(180);
-            Logger.log("Toggled Sidebar: Out\n");
+            Logger.getInstanceLogger().log("Showed the sidebar\n");
         }
     }
 }

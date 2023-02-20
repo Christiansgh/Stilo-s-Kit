@@ -1,10 +1,11 @@
 package utils.initializers;
 
-import elements.logwindow.LogWindow;
+import elements.regions.sidebar.Sidebar;
+import elements.regions.topbar.Topbar;
+import elements.regions.windows.LogWindow;
 import elements.resources.Resources;
-import elements.sidebar.Sidebar;
-import elements.sidebar.SidebarIcons;
-import elements.topbar.Topbar;
+import elements.resources.factories.CircleFactory;
+import elements.resources.factories.CircleFactory.circleTypeEnum;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
@@ -26,14 +27,15 @@ public class Initializer {
 
         stage.getIcons().add(Resources.getLogoApplication(20, 20));
 
-        // run initialization
-        AnchorPane root = new AnchorPane(Sidebar.getInstance(), Topbar.getInstance(), LogWindow.getInstance());
+        PluginsInitializer.initialize();
 
-        Sidebar.toggleSidebar();//set invisible
-        Circle toggleLogWindow = Resources.getButtonTopbar();
-        LogWindow.toggleLogWindow(); //set invisible
-        toggleLogWindow.setOnMouseClicked(e -> LogWindow.toggleLogWindow());
-        SidebarIcons.addSidebarIcon(toggleLogWindow);
+        // run initialization
+        AnchorPane root = new AnchorPane(Sidebar.getInstanceSidebar(), Topbar.getInstance(), LogWindow.getInstance());
+
+        //Circle toggleLogWindow = CircleFactory.createCircle(circleTypeEnum.btnTopbar);
+        //LogWindow.toggleLogWindow(); //set invisible
+        //toggleLogWindow.setOnMouseClicked(e -> LogWindow.toggleLogWindow());
+        //SidebarIcons.addSidebarIcon(toggleLogWindow);
 
         AnchorPane.setTopAnchor(LogWindow.getInstance(), 23.0);
         

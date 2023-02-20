@@ -1,11 +1,11 @@
-package elements.topbar;
+package elements.regions.topbar;
 
+import elements.regions.topbar.topbarIcons.Close;
+import elements.regions.topbar.topbarIcons.Refresh;
+import elements.regions.topbar.topbarIcons.ToggleSidebar;
 import elements.resources.Resources;
-import elements.resources.box.BoxFactory;
-import elements.resources.box.BoxFactory.boxTypeEnum;
-import elements.topbar.topbarIcons.Close;
-import elements.topbar.topbarIcons.Refresh;
-import elements.topbar.topbarIcons.ToggleSidebar;
+import elements.resources.factories.BoxFactory;
+import elements.resources.factories.BoxFactory.boxTypeEnum;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;

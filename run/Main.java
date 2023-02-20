@@ -52,6 +52,11 @@ import utils.initializers.Initializer;
  * - Needs to extend, since we need to force an attribute containing state.
  * - Needs to implement toggle() to toggle the state, and isToggled(), as a getter method to get the state.
  * - Phase out Toggler.java
+ * 
+ * Make plugin interface:
+ * - Implement initialize(), adding the icon to the sidebar, setting the plugin icon.
+ * - Implement another toggle isActive().
+ * - Implement a method that holds a window (stackpane populated with children)
  */
 
 public class Main extends Application {
