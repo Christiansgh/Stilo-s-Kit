@@ -7,7 +7,7 @@ import javafx.scene.layout.StackPane;
 import utils.Logger;
 
 public class LogWindow {
-    private static boolean isVisible = false;
+    private static boolean isVisible = true;
     private static StackPane logWindow = null;
     private LogWindow() {};
 
@@ -19,10 +19,10 @@ public class LogWindow {
 
         return logWindow;
     }
-
+    
     public static void toggleLogWindow() {
         isVisible = !isVisible;
-        SidebarIcons.toggleWindow(logWindow, isVisible);
+        SidebarIcons.toggleSidebarWindow(logWindow, isVisible);
         Logger.log("Toggled Log window\n");
     }
 }

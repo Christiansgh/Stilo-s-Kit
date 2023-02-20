@@ -23,8 +23,7 @@ public class SidebarIcons {
         getInstance().getChildren().add(node);
     }
 
-    public static void toggleWindow(Node window, boolean startState) {
-        //System.out.println("Toggled" +window);
+    public static void toggleSidebarWindow(Node window, boolean startState) {
         Toggler.toggle(window, startState);
     }
 }

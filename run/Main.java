@@ -1,6 +1,8 @@
+package run;
+
 import javafx.application.Application;
 import javafx.stage.Stage;
-import run.Initializer;
+import utils.initializers.Initializer;
 
 /*
  * TODO:
@@ -44,6 +46,12 @@ import run.Initializer;
  * When executing the Open window method
  *  - Clear the window.
  *  - Populate it with the array of logs (text).
+ * 
+ * Clean up:
+ * Make toggleable windows inherit from the abstract class "toggleable"
+ * - Needs to extend, since we need to force an attribute containing state.
+ * - Needs to implement toggle() to toggle the state, and isToggled(), as a getter method to get the state.
+ * - Phase out Toggler.java
  */
 
 public class Main extends Application {

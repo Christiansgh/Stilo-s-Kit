@@ -1,20 +1,16 @@
-package run;
+package utils.initializers;
 
 import elements.logwindow.LogWindow;
 import elements.resources.Resources;
-import elements.resources.box.BoxFactory;
-import elements.resources.box.BoxFactory.boxTypeEnum;
 import elements.sidebar.Sidebar;
 import elements.sidebar.SidebarIcons;
 import elements.topbar.Topbar;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import utils.Logger;
 
 /*
  * Initializes / updates the state of the app.
@@ -33,7 +29,9 @@ public class Initializer {
         // run initialization
         AnchorPane root = new AnchorPane(Sidebar.getInstance(), Topbar.getInstance(), LogWindow.getInstance());
 
+        Sidebar.toggleSidebar();//set invisible
         Circle toggleLogWindow = Resources.getButtonTopbar();
+        LogWindow.toggleLogWindow(); //set invisible
         toggleLogWindow.setOnMouseClicked(e -> LogWindow.toggleLogWindow());
         SidebarIcons.addSidebarIcon(toggleLogWindow);
 
