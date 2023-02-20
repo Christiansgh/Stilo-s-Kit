@@ -57,6 +57,10 @@ import utils.initializers.Initializer;
  * - Implement initialize(), adding the icon to the sidebar, setting the plugin icon.
  * - Implement another toggle isActive().
  * - Implement a method that holds a window (stackpane populated with children)
+ * 
+ * Clean the plugin abstract class:
+ * - look at the class & Logger. Logger has some methods which didn't need implementation.
+ *      - Do we really need these? If not - then cut them.
  */
 
 public class Main extends Application {
