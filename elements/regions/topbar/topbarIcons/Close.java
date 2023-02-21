@@ -1,6 +1,6 @@
 package elements.regions.topbar.topbarIcons;
 
-import elements.plugins.Logger;
+import elements.plugins.logger.Logger;
 import elements.resources.Resources;
 import elements.resources.factories.CircleFactory;
 import elements.resources.factories.CircleFactory.circleTypeEnum;

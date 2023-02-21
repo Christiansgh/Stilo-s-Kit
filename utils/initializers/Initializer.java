@@ -1,15 +1,12 @@
 package utils.initializers;
 
+import elements.plugins.logger.Logger;
 import elements.regions.sidebar.Sidebar;
 import elements.regions.topbar.Topbar;
-import elements.regions.windows.LogWindow;
 import elements.resources.Resources;
-import elements.resources.factories.CircleFactory;
-import elements.resources.factories.CircleFactory.circleTypeEnum;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -30,14 +27,14 @@ public class Initializer {
         PluginsInitializer.initialize();
 
         // run initialization
-        AnchorPane root = new AnchorPane(Sidebar.getInstanceSidebar(), Topbar.getInstance(), LogWindow.getInstance());
+        AnchorPane root = new AnchorPane(Sidebar.getInstanceSidebar(), Topbar.getInstance(), Logger.getInstanceWindow());
 
         //Circle toggleLogWindow = CircleFactory.createCircle(circleTypeEnum.btnTopbar);
         //LogWindow.toggleLogWindow(); //set invisible
         //toggleLogWindow.setOnMouseClicked(e -> LogWindow.toggleLogWindow());
         //SidebarIcons.addSidebarIcon(toggleLogWindow);
 
-        AnchorPane.setTopAnchor(LogWindow.getInstance(), 23.0);
+        AnchorPane.setTopAnchor(Logger.getInstanceWindow(), 23.0);
         
         // execute code HERE
 

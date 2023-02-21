@@ -1,6 +1,6 @@
 package elements.resources.factories;
 
-import elements.plugins.Logger;
+import elements.plugins.logger.Logger;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 

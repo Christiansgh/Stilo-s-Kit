@@ -18,7 +18,7 @@ public class Sidebar {
         if (sidebar == null) {
             sidebar = new AnchorPane(BoxFactory.createBox(boxTypeEnum.boxSidebar), getInstanceSidebarPlugins());
             AnchorPane.setTopAnchor(getInstanceSidebarPlugins(), 30.0);
-            AnchorPane.setRightAnchor(getInstanceSidebarPlugins(), 15.0);
+            AnchorPane.setRightAnchor(getInstanceSidebarPlugins(), 5.0);
             return sidebar;
         }
 
@@ -29,7 +29,7 @@ public class Sidebar {
         if (sidebarPlugins == null) {
             sidebarPlugins = new VBox(20);
             sidebarPlugins.setLayoutX(ScreenBounds.getWidth()-45);
-            sidebarPlugins.setAlignment(Pos.TOP_CENTER);
+            sidebarPlugins.setAlignment(Pos.CENTER);
         }
 
         return sidebarPlugins;

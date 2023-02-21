@@ -1,6 +1,6 @@
 package utils.initializers;
 
-import elements.plugins.Logger;
+import elements.plugins.logger.Logger;
 
 public class PluginsInitializer {
     //run Sidebar.addPlugin()

@@ -19,11 +19,5 @@ public abstract class Plugin {
     
     public abstract void toggleActive();
 
-    public abstract boolean isActive();
-
-    public abstract Node getPluginIcon();
-
-    public abstract void setPluginIcon(Node newIcon);
-
     public abstract void initialize();
 }

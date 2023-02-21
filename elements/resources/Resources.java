@@ -46,4 +46,10 @@ public class Resources {
         refreshIcon.setScaleY(0.8);
         return refreshIcon;
     }
+
+    public static SVGPath getIconLogger() {
+        SVGPath loggerIcon = new SVGPath();
+        loggerIcon.setContent("M8 8H16M8 12H16M10 16H14M3.5 12C3.5 5.5 5.5 3.5 12 3.5C18.5 3.5 20.5 5.5 20.5 12C20.5 18.5 18.5 20.5 12 20.5C5.5 20.5 3.5 18.5 3.5 12Z");
+        return loggerIcon;
+    }
 }

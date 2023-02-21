@@ -61,6 +61,13 @@ import utils.initializers.Initializer;
  * Clean the plugin abstract class:
  * - look at the class & Logger. Logger has some methods which didn't need implementation.
  *      - Do we really need these? If not - then cut them.
+ * 
+ * Hide windows:
+ * Find a way in Sidebar.addPlugin() to set the plugin window invisible on initalization.
+ * 
+ * Set the main window to multiple GridPanes. This way we can display windows in the grid.
+ * - 1 for Big windows.
+ * - 1 for smaller icons.
  */
 
 public class Main extends Application {

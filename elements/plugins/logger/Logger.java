@@ -1,25 +1,31 @@
-package elements.plugins;
+package elements.plugins.logger;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import api.Plugin;
 import elements.regions.sidebar.Sidebar;
-import elements.regions.windows.LogWindow;
+import elements.resources.factories.BoxFactory;
 import elements.resources.factories.CircleFactory;
+import elements.resources.factories.BoxFactory.boxTypeEnum;
 import elements.resources.factories.CircleFactory.circleTypeEnum;
 import javafx.scene.Node;
+import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 
+
+
 public class Logger extends Plugin {
     private boolean isVisible = false;
     private boolean isActive = false;
     private static TextFlow logs = null;
     private static Logger logger = null;
+    private static StackPane window = null;
+
     private Logger(boolean isVisible, boolean isActive, Node pluginIcon, Node pluginWindow) {
         super(isVisible, isActive, pluginIcon, pluginWindow);
     }
@@ -35,11 +41,21 @@ public class Logger extends Plugin {
 
     public static Logger getInstanceLogger() {
         if (logger == null) {
-            logger = new Logger(true, false, CircleFactory.createCircle(circleTypeEnum.btnPlaceHolder), LogWindow.getInstance());
+            StackPane loggerIcon = new StackPane(CircleFactory.createCircle(circleTypeEnum.btnPlaceHolder), CircleFactory.createCircle(circleTypeEnum.btnTopbar));
+            logger = new Logger(false, false, loggerIcon, getInstanceWindow());
             return logger;
         }
         
         return logger;
+    }
+
+    public static StackPane getInstanceWindow() {
+        if (window == null) {
+            window = new StackPane(BoxFactory.createBox(boxTypeEnum.boxLogging), getInstanceLogs());
+            return window;
+        }
+
+        return window;
     }
 
     public void log(String message) {
@@ -65,7 +81,7 @@ public class Logger extends Plugin {
     @Override
     public void toggleVisible() {
         isVisible = !isVisible;
-        LogWindow.getInstance().setVisible(isVisible);
+        getInstanceWindow().setVisible(isVisible);
 
         if (isVisible) {
             getInstanceLogger().log("Showed the log window\n");
@@ -83,29 +99,8 @@ public class Logger extends Plugin {
     }
 
     @Override
-    public boolean isActive() {
-        // TODO Auto-generated method stub
-        return false;
-    }
-
-    @Override
-    public Node getPluginIcon() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
-    public void setPluginIcon(Node newIcon) {
-        // TODO Auto-generated method stub
-        
-    }
-
-    @Override
     public void initialize() {
+        pluginWindow.setVisible(isActive);        
         Sidebar.addPlugin(pluginIcon, pluginWindow, getInstanceLogger());
-        //create a circle -> CircleFactory.
-        //setOnMouseClicked(e -> ToggleWindow)
-        //add the circle to the sidebar
-        //set the window to invisible.
     }
 }
