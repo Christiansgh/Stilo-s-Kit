@@ -82,6 +82,7 @@ import utils.initializers.Initializer;
  * 
  * https://www.linkedin.com/pulse/opencv-java-yolo-object-detection-images-svetozar-radoj%C4%8Din?trk=pulse-article_more-articles_related-content-card
  * https://sikulix.github.io/docs/
+ * https://docs.opencv.org/2.4/doc/tutorials/imgproc/histograms/template_matching/template_matching.html
  */
 
 public class Main extends Application {
