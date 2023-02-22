@@ -81,6 +81,7 @@ import utils.initializers.Initializer;
  * BufferedImage.isOnScreen()?
  * 
  * https://www.linkedin.com/pulse/opencv-java-yolo-object-detection-images-svetozar-radoj%C4%8Din?trk=pulse-article_more-articles_related-content-card
+ * https://sikulix.github.io/docs/
  */
 
 public class Main extends Application {
