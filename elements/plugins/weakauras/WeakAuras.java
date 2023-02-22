@@ -37,8 +37,8 @@ public class WeakAuras {
         image.setVisible(false);
     }
 
-    public void activate() {
-        SoundPlayer.playSound("overload.mp3");
+    public void activate(String soundName) {
+        SoundPlayer.playSound(soundName);
         image.setVisible(true);
         ScaleTransition scaleTransition = new ScaleTransition(Duration.millis(transitionTimeMillis), image);
         FadeTransition fadeTransition = new FadeTransition(Duration.millis(transitionTimeMillis), image);

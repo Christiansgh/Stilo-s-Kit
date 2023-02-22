@@ -51,7 +51,7 @@ public class Sidebar {
         
         //event handler
         Circle btnTest = CircleFactory.createCircle(circleTypeEnum.btnPlaceHolder);
-        btnTest.setOnMouseClicked(e -> weakAurasTest.activate());
+        btnTest.setOnMouseClicked(e -> weakAurasTest.activate("overload.mp3"));
         getInstanceSidebarPlugins().getChildren().add(btnTest);
     }
 }

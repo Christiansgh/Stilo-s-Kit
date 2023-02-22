@@ -68,6 +68,19 @@ import utils.initializers.Initializer;
  * Set the main window to multiple GridPanes. This way we can display windows in the grid.
  * - 1 for Big windows.
  * - 1 for smaller icons.
+ * 
+ * Detection of buffs:
+ * OpenCV:
+ * cv(2?).matchTemplate(needleImg);
+ * max_val(double returned as match confidence), max_loc( x , y)
+ * .rectangle(topleft corner height width(rgb color, line thickness)) - draws rectangle around the template
+ * 
+ * Maybe the robots api can work with createScrenCapture()?
+ * - Creates a buffered image, maybe I can use that with matchTemplate()?
+ *      - Call it every tick?
+ * BufferedImage.isOnScreen()?
+ * 
+ * https://www.linkedin.com/pulse/opencv-java-yolo-object-detection-images-svetozar-radoj%C4%8Din?trk=pulse-article_more-articles_related-content-card
  */
 
 public class Main extends Application {
