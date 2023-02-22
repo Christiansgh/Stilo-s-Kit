@@ -2,12 +2,17 @@ package elements.regions.sidebar;
 
 import api.Plugin;
 import elements.fingerprinting.ScreenBounds;
+import elements.plugins.weakauras.WeakAuras;
+import elements.resources.Resources;
 import elements.resources.factories.BoxFactory;
+import elements.resources.factories.CircleFactory;
 import elements.resources.factories.BoxFactory.boxTypeEnum;
+import elements.resources.factories.CircleFactory.circleTypeEnum;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.shape.Circle;
 
 public class Sidebar {
     private static AnchorPane sidebar = null;
@@ -38,5 +43,15 @@ public class Sidebar {
     public static void addPlugin(Node pluginImage, Node pluginWindow, Plugin plugin) {
         pluginImage.setOnMouseClicked(e -> {plugin.toggleVisible();});
         getInstanceSidebarPlugins().getChildren().add(pluginImage);
+    }
+
+    public static void test() {
+        WeakAuras weakAurasTest = new WeakAuras(Resources.getItemOverload(), 25, 0, 0.2, 500);
+        weakAurasTest.initialize();
+        
+        //event handler
+        Circle btnTest = CircleFactory.createCircle(circleTypeEnum.btnPlaceHolder);
+        btnTest.setOnMouseClicked(e -> weakAurasTest.activate());
+        getInstanceSidebarPlugins().getChildren().add(btnTest);
     }
 }

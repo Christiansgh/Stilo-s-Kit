@@ -1,6 +1,7 @@
 package elements.resources;
 
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.shape.SVGPath;
 
 /*
@@ -10,7 +11,7 @@ import javafx.scene.shape.SVGPath;
  */
 
 public class Resources {
-    //Logo
+    //Images
     public static Image getLogo(int sizeX, int sizeY) {
         Image logo = new Image("elements/resources/images/logo.png", 20, 20, true, true);
         return logo;
@@ -19,6 +20,12 @@ public class Resources {
     public static Image getLogoApplication(int sizeX, int sizeY) {
         Image logo = new Image("elements/resources/images/applicationLogo.png");
         return logo;
+    }
+
+    public static ImageView getItemOverload() {
+        Image overload = new Image("elements/resources/images/overload.png");
+        ImageView ImageView = new ImageView(overload);
+        return ImageView;
     }
 
     //Icons

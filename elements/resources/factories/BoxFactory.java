@@ -19,7 +19,7 @@ public class BoxFactory {
         switch (type) {
             case boxLogging:
                 Rectangle boxLogging = new Rectangle(750, 900, Color.BLACK);
-                boxLogging.setOpacity(0.2);
+                boxLogging.setOpacity(0.7);
                 boxLogging.setStroke(Color.WHITE);
                 boxLogging.setStrokeWidth(2);
                 return boxLogging;
