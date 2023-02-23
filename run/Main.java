@@ -62,6 +62,11 @@ import utils.initializers.Initializer;
  * - look at the class & Logger. Logger has some methods which didn't need implementation.
  *      - Do we really need these? If not - then cut them.
  * 
+ * Move:
+ * - In weakAuras: The activate(String soundName),
+ *      - String sound name should be a parameter in the constructor, og made as a set method.
+ *      - It should not be a parameter in the activate(), since not all weakauras need a sound.
+ * 
  * Hide windows:
  * Find a way in Sidebar.addPlugin() to set the plugin window invisible on initalization.
  * 

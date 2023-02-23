@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Mainmain",
+            "request": "launch",
+            "mainClass": "run.Mainmain",
+            "projectName": "Stilo-s-Kit_484e2273"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
