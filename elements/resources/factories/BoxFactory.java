@@ -1,11 +1,15 @@
 package elements.resources.factories;
 
 import elements.fingerprinting.ScreenBounds;
+import javafx.scene.Node;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.ScrollPane.ScrollBarPolicy;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
 public class BoxFactory {
     public enum boxTypeEnum {
+        boxSettingsWindow,
         boxTooltip,
         boxLogging,
         boxQuestHelper,
@@ -15,8 +19,14 @@ public class BoxFactory {
         boxTopbar
     }
 
-    public static Rectangle createBox(boxTypeEnum type) {
+    public static Node createBox(boxTypeEnum type) {
         switch (type) {
+            case boxSettingsWindow:
+                Rectangle rect = new Rectangle(400, ScreenBounds.getHeight(), Color.web("#111111"));
+                rect.setStroke(Color.GREY);
+                rect.setStrokeWidth(2);
+                return rect;
+            
             case boxLogging:
                 Rectangle boxLogging = new Rectangle(750, 900, Color.BLACK);
                 boxLogging.setOpacity(0.7);

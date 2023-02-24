@@ -74,6 +74,10 @@ import utils.initializers.Initializer;
  * - 1 for Big windows.
  * - 1 for smaller icons.
  * 
+ * Clean up layout:
+ * Make the setting windows children of the sidebar instead. This will assure, that when the sidebar is toggled,
+ * we will hide the active settings window as well.
+ * 
  * Detection of buffs:
  * OpenCV:
  * cv(2?).matchTemplate(needleImg);

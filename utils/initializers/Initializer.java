@@ -1,6 +1,7 @@
 package utils.initializers;
 
 import elements.fingerprinting.ScreenBounds;
+import elements.plugins.Macros;
 import elements.plugins.logger.Logger;
 import elements.plugins.weakauras.WeakAuras;
 import elements.regions.sidebar.Sidebar;
@@ -30,10 +31,11 @@ public class Initializer {
         
 
         // run initialization
-        AnchorPane root = new AnchorPane(Logger.getInstanceWindow(), WeakAuras.getAuraImages(), Sidebar.getInstanceSidebar(), Topbar.getInstance());
+        AnchorPane root = new AnchorPane(Macros.getInstanceSettingsWindow(), Logger.getInstanceWindow(), WeakAuras.getAuraImages(), Sidebar.getInstanceSidebar(), Topbar.getInstance());
         AnchorPane.setLeftAnchor(WeakAuras.getAuraImages(), (double) ScreenBounds.getHeight()/2);
         AnchorPane.setTopAnchor(WeakAuras.getAuraImages(), (double) ScreenBounds.getHeight()/3);
         AnchorPane.setTopAnchor(Logger.getInstanceWindow(), 23.0);
+        AnchorPane.setTopAnchor(Macros.getInstanceSettingsWindow(), 23.0);
         // execute code HERE
 
         // makes it so you don't tab out when clicking, acting like an overlay.

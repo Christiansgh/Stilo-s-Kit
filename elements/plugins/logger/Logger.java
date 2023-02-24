@@ -20,11 +20,11 @@ import javafx.scene.text.TextFlow;
 
 
 public class Logger extends Plugin {
-    private boolean isVisible = false;
-    private boolean isActive = false;
+    private boolean isVisible;
+    private boolean isActive;
     private static TextFlow logs = null;
     private static Logger logger = null;
-    private static StackPane window = null;
+    private static Node window = null;
 
     private Logger(boolean isVisible, boolean isActive, Node pluginIcon, Node pluginWindow) {
         super(isVisible, isActive, pluginIcon, pluginWindow);
@@ -42,14 +42,14 @@ public class Logger extends Plugin {
     public static Logger getInstanceLogger() {
         if (logger == null) {
             StackPane loggerIcon = new StackPane(CircleFactory.createCircle(circleTypeEnum.btnPlaceHolder), CircleFactory.createCircle(circleTypeEnum.btnTopbar));
-            logger = new Logger(false, false, loggerIcon, getInstanceWindow());
+            logger = new Logger(true, false, loggerIcon, getInstanceWindow());
             return logger;
         }
         
         return logger;
     }
 
-    public static StackPane getInstanceWindow() {
+    public static Node getInstanceWindow() {
         if (window == null) {
             window = new StackPane(BoxFactory.createBox(boxTypeEnum.boxLogging), getInstanceLogs());
             return window;
@@ -100,7 +100,7 @@ public class Logger extends Plugin {
 
     @Override
     public void initialize() {
-        pluginWindow.setVisible(isActive);        
+        pluginWindow.setVisible(isVisible);       
         Sidebar.addPlugin(pluginIcon, pluginWindow, getInstanceLogger());
     }
 }

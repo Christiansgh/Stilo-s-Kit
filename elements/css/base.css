@@ -9,4 +9,14 @@
     -fx-fill: #E6CA83;
 }
 
+.settingsContent {
+
+}
+
+.settingsContentTitle {
+    -fx-text-fill: #E6CA83;
+    -fx-font-weight: 900;
+    -fx-font-size: 48;
+}
+
 /* TODO: MAKE HOVERSTATE FOR TOP RIGHT BUTTONS
