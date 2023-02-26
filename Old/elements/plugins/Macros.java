@@ -1,7 +1,6 @@
 package elements.plugins;
 
 import api.Plugin;
-import elements.fingerprinting.ScreenBounds;
 import elements.plugins.logger.Logger;
 import elements.regions.sidebar.Sidebar;
 import elements.resources.factories.BoxFactory;
@@ -15,6 +14,7 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.control.ScrollPane.ScrollBarPolicy;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import utils.ScreenBounds;
 
 public class Macros extends Plugin {
     private boolean isVisible;

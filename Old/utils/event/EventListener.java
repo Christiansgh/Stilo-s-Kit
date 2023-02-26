@@ -5,8 +5,13 @@ import utils.RobotController;
 
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 
 import javax.imageio.ImageIO;
+
+import org.opencv.core.Mat;
+import org.opencv.core.MatOfByte;
+import org.opencv.imgcodecs.Imgcodecs;
 
 import java.awt.Rectangle;
 
@@ -42,11 +47,11 @@ public class EventListener {
 
     }
 
-    private Mat convertBufferedImageToMat(BufferedImage BI) {
+    private Mat convertBufferedImageToMat(BufferedImage BI) throws IOException {
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         ImageIO.write(BI, "png", byteArrayOutputStream);
         byteArrayOutputStream.flush();
-        return Imgcodecs.imdecode(new MatOfByte(byteArrayOutputStream.toByteArray()), Imgcodecs.CV_LOAD_IMAGE_UNCHANGED);
+        return Imgcodecs.imdecode(new MatOfByte(byteArrayOutputStream.toByteArray()), Imgcodecs.IMREAD_ANYCOLOR);
     }
     //Take screenshot -> Robots & based on screenarea.
 

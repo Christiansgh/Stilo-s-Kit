@@ -1,7 +1,6 @@
 package elements.regions.sidebar;
 
 import api.Plugin;
-import elements.fingerprinting.ScreenBounds;
 import elements.plugins.weakauras.WeakAuras;
 import elements.resources.Resources;
 import elements.resources.factories.BoxFactory;
@@ -13,6 +12,7 @@ import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Circle;
+import utils.ScreenBounds;
 
 public class Sidebar {
     private static AnchorPane sidebar = null;

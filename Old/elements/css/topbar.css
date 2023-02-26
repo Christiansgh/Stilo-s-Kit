@@ -1,0 +1,10 @@
+.label {
+    -fx-text-fill: #E6CA83;
+    -fx-font-weight: 900;
+    -fx-font-style: italic;
+}
+
+.background {
+    -fx-background-color: #000000;
+    -fx-effect: dropshadow(gaussian, #000000, 10, 0, 0, 5);
+}

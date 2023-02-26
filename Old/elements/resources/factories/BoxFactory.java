@@ -1,11 +1,11 @@
 package elements.resources.factories;
 
-import elements.fingerprinting.ScreenBounds;
 import javafx.scene.Node;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.ScrollPane.ScrollBarPolicy;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import utils.ScreenBounds;
 
 public class BoxFactory {
     public enum boxTypeEnum {
@@ -37,6 +37,7 @@ public class BoxFactory {
             case boxSidebar:
                 Rectangle boxSidebar = new Rectangle(45, ScreenBounds.getHeight(), Color.web("#000000"));
                 boxSidebar.setX(ScreenBounds.getWidth()-45);
+                boxSidebar.setY(23);
                 return boxSidebar;
 
             case boxTopbar:

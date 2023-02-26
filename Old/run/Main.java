@@ -1,7 +1,11 @@
 package run;
 
+import elements.skeleton.Skeleton;
 import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import utils.initializers.Initializer;
 
 /*
@@ -104,7 +108,8 @@ public class Main extends Application {
         Application.setUserAgentStylesheet(STYLESHEET_CASPIAN); //change this. its wrong, but it fixed the control whitebackground issue.
         
         //create the window
-        Initializer.initializeStage(stage);
+        //Initializer.initializeStage(stage);
+        Skeleton.initialize(stage);
 
         //set initial dimensions
         stage.setMaximized(true);
