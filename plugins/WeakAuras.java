@@ -9,7 +9,7 @@ public class WeakAuras extends Plugin {
     /*
      * Implement popups.
      * Start / end scale
-     * stat / end opacity
+     * stat / end opacity   
      * transition time
      */
     private static WeakAuras weakAuras = null;
@@ -26,7 +26,7 @@ public class WeakAuras extends Plugin {
 
     @Override
     public void initialize() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'initialize'");
+        
+        
     }
 }

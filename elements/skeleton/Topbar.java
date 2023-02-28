@@ -58,7 +58,7 @@ public class Topbar {
             AnchorPane.setRightAnchor(topbarIcons, 10.0);
 
             //style the elements with css
-            topbar.getStylesheets().add("elements/css/topbar.css");
+            topbar.getStylesheets().add("elements/resources/css/topbar.css");
             topbar.getStyleClass().addAll("background");
         }
         return topbar;
