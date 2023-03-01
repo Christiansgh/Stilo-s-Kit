@@ -1,4 +1,4 @@
-package plugins.weakauras;
+package weakauras;
 
 import javafx.animation.ScaleTransition;
 import javafx.animation.FadeTransition;
