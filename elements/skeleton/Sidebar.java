@@ -23,6 +23,10 @@ public class Sidebar {
             sidebar.getChildren().add(pluginIcons);
             sidebar.getStylesheets().add("/elements/resources/css/sidebar.css");
             sidebar.getStyleClass().add("background");
+
+            //reposition the plugin logos
+            AnchorPane.setTopAnchor(pluginIcons, 40.0);
+            AnchorPane.setRightAnchor(pluginIcons, 10.0);
         }
         return sidebar;
     }

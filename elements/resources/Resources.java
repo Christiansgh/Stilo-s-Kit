@@ -28,6 +28,10 @@ public class Resources {
         return ImageView;
     }
 
+    //Plugin windows
+
+    //Setting windows 
+
     //Icons
     public static SVGPath getIconClose() {
         SVGPath closeIcon = new SVGPath();

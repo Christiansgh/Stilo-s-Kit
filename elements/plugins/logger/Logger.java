@@ -1,3 +1,4 @@
+package elements.plugins.logger;
 /*package plugins.logger;
 
 import java.text.SimpleDateFormat;

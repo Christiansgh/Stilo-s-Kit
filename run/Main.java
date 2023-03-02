@@ -3,6 +3,7 @@ package run;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import elements.skeleton.Skeleton;
+import initializers.Initializer;
 
 /*
  * What do we seek:
@@ -76,6 +77,11 @@ import elements.skeleton.Skeleton;
 - In weakAuras: The activate(String soundName),
 - `- String sound name should be a parameter in the constructor, og made as a set method.`
 - `- It should not be a parameter in the activate(), since not all weakauras need a sound.`
+
+- Implement:
+- Propper icons for the buttons instead of placeholders.
+-    Change the icon in the plugins constructor. 
+- Implement trigger events in the WeakAura class.
 - 
 - Hide windows:
 - Find a way in Sidebar.addPlugin() to set the plugin window invisible on initalization.
@@ -114,6 +120,7 @@ public class Main extends Application {
         Application.setUserAgentStylesheet(STYLESHEET_CASPIAN); //change this. its wrong, but it fixed the control whitebackground issue.
 
         Skeleton.initialize(stage);
+        Initializer.initialize();
         //run plugin initializer
         //run settings initializer        
 

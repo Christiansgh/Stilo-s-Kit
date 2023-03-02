@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Launch Mainmain",
             "request": "launch",
-            "mainClass": "Main",
+            "mainClass": "run.Mainmain",
             "projectName": "Stilo's Kit_8dbe9868"
         },
         {

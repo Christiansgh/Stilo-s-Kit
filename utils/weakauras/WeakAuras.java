@@ -1,4 +1,5 @@
-package weakauras;
+package utils.weakauras;
+/*package weakauras;
 
 import javafx.animation.ScaleTransition;
 import javafx.animation.FadeTransition;
@@ -64,3 +65,4 @@ public abstract class WeakAuras {
 
     
 }
+*/
