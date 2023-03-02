@@ -1,7 +1,7 @@
 package elements.plugins.weakauras;
 import api.Plugin;
-import elements.general.PluginWindow;
-import elements.general.SettingsWindow;
+import elements.resources.factories.RectangleFactory;
+import elements.resources.factories.RectangleFactory.rectangles;
 import elements.skeleton.Sidebar;
 import javafx.scene.Node;
 import javafx.scene.layout.StackPane;
@@ -25,7 +25,8 @@ public class WeakAuras extends Plugin {
     public static WeakAuras getInstance() {
         if (weakAuras == null) {                                                                     //resources.getSettingsWindowWeakAuras; Resources.getPluginWindowWeakAuras;
             auraPopUps = new StackPane();//Fix the constructor by manually implementing the params   //settings window //plugin window --> make class.
-            weakAuras = new WeakAuras(false, false, false, new Circle(15, Color.AQUA), new SettingsWindow(), new PluginWindow());
+            weakAuras = new WeakAuras(false, false, false, new Circle(15, Color.AQUA), RectangleFactory.createRectangle(rectangles.SETTINGSWINDOW), RectangleFactory.createRectangle(rectangles.SETTINGSWINDOW));
+            
         }
         return weakAuras;
     }
@@ -37,7 +38,9 @@ public class WeakAuras extends Plugin {
     @Override
     public void initialize() {
         Sidebar.addPlugin(pluginIcon);
-        pluginIcon.setOnMouseClicked(e -> System.out.println("Test!!"));
+        pluginIcon.setOnMouseClicked(e -> getInstance().toggleVisibleSettings());
+        getInstance().addWindowPlugins();
+        getInstance().addWindowSettings();
         /*
          * Implement WeakAura subclass here.
          * ie:

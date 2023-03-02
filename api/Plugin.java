@@ -11,8 +11,8 @@ public abstract class Plugin {
     protected Node windowSettings;
     protected Node windowPlugin;
 
-    protected static StackPane settingsStack; //Stack of all the settings windows.
-    protected static StackPane pluginsStack; //Stack of all the customization windows.
+    protected static StackPane settingsStack = new StackPane(); //Stack of all the settings windows.
+    protected static StackPane pluginsStack = new StackPane(); //Stack of all the customization windows.
 
     public Plugin(boolean isVisibleSettings, boolean isVisiblePlugin, boolean isActive, Node pluginIcon, Node windowSettings, Node windowPlugin) {
         this.isVisibleSettings = isVisibleSettings;
@@ -33,6 +33,7 @@ public abstract class Plugin {
 
     public void toggleVisibleSettings() {
         isVisibleSettings = !isVisibleSettings;
+        windowSettings.setVisible(isVisibleSettings);
     }
 
     public void toggleVisiblePlugins() {
@@ -44,4 +45,12 @@ public abstract class Plugin {
     }
 
     public abstract void initialize();
+
+    public static StackPane getSettingsStack() {
+        return settingsStack;
+    }
+
+    public static StackPane getPluginsStack() {
+        return pluginsStack;
+    }
 }
