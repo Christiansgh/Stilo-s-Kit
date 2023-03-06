@@ -12,6 +12,16 @@ import javafx.scene.shape.SVGPath;
 
 public class Resources {
     //Images
+    public static Image getWA() {
+        Image wa = new Image("elements/resources/images/WA.png", 20, 20, true, true);
+        return wa;
+    }
+    
+    public static Image getList() {
+        Image list = new Image("elements/resources/images/list.png", 20, 20, true, true);
+        return list;
+    }
+    
     public static Image getLogo(int sizeX, int sizeY) {
         Image logo = new Image("elements/resources/images/logo.png", 20, 20, true, true);
         return logo;

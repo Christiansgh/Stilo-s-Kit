@@ -2,3 +2,10 @@
     -fx-background-color: #000000;
     -fx-effect: dropshadow(gaussian, #000000, 10, 0, 0, 5);
 }
+
+.title {
+    -fx-text-fill: #E6CA83;
+    -fx-font-weight: 700;
+    -fx-font-size: 48;
+    -fx-effect: dropshadow(gaussian, #000000, 500, 0, 0, 5);
+}

@@ -78,6 +78,9 @@ import initializers.Initializer;
 - `- String sound name should be a parameter in the constructor, og made as a set method.`
 - `- It should not be a parameter in the activate(), since not all weakauras need a sound.`
 
+- Inherit:
+- Make PluginWindow && SettingsWindow extend an abstract class "Sidebar Window".
+
 - Implement:
 - Propper icons for the buttons instead of placeholders.
 -    Change the icon in the plugins constructor. 

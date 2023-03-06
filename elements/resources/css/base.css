@@ -16,7 +16,7 @@
 .settingsContentTitle {
     -fx-text-fill: #E6CA83;
     -fx-font-weight: 900;
-    -fx-font-size: 48;
+    -fx-font-size: 100;
 }
 
 /* TODO: MAKE HOVERSTATE FOR TOP RIGHT BUTTONS

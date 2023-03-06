@@ -22,12 +22,20 @@ public class RectangleFactory {
                 return sidebarWindow;
 
             case SETTINGSWINDOW:
-                Node background = createRectangle(rectangles.SIDEBARWINDOW);
-                ScrollPane scrollPane = new ScrollPane(background);
-                scrollPane.setHbarPolicy(ScrollBarPolicy.NEVER);
-                scrollPane.setVbarPolicy(ScrollBarPolicy.AS_NEEDED);
-                Node settingsWindow = new StackPane(scrollPane);
+                Node backgroundSettingsWindow = createRectangle(rectangles.SIDEBARWINDOW);
+                ScrollPane scrollPaneSettingsWindow = new ScrollPane(backgroundSettingsWindow);
+                scrollPaneSettingsWindow.setHbarPolicy(ScrollBarPolicy.NEVER);
+                scrollPaneSettingsWindow.setVbarPolicy(ScrollBarPolicy.AS_NEEDED);
+                Node settingsWindow = new StackPane(scrollPaneSettingsWindow);
                 return settingsWindow;
+
+            case PLUGINWINDOW:
+                Node backgroundPluginWindow = createRectangle(rectangles.SIDEBARWINDOW);
+                ScrollPane scrollPanePluginWindow = new ScrollPane(backgroundPluginWindow);
+                scrollPanePluginWindow.setHbarPolicy(ScrollBarPolicy.NEVER);
+                scrollPanePluginWindow.setVbarPolicy(ScrollBarPolicy.AS_NEEDED);
+                Node pluginWindow = new StackPane(scrollPanePluginWindow);
+                return pluginWindow;
         
             default:
                 Node defaultRectangle = new Rectangle();
