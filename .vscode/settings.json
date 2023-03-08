@@ -17,6 +17,7 @@
         "/home/stilo/Programming/ReferenceLibaries/openjfx/current/sdk/lib/javafx.swing.jar",
         "/home/stilo/Programming/ReferenceLibaries/openjfx/current/sdk/lib/javafx.web.jar",
         "/home/stilo/Programming/ReferenceLibaries/openjfx/current/sdk/lib/javafx-swt.jar",
-        "c:\\Users\\Christian\\Desktop\\Libaries\\opencv\\build\\java\\opencv-470.jar"
+        "c:\\Users\\Christian\\Desktop\\Libaries\\opencv\\build\\java\\opencv-470.jar",
+        "c:\\Users\\Christian\\Desktop\\Libaries\\stilojfx\\stilojfx.jar"
     ]
 }

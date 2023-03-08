@@ -1,5 +1,6 @@
 package api;
 
+import elements.general.PluginWindow;
 import javafx.scene.Node;
 import javafx.scene.layout.StackPane;
 
@@ -32,11 +33,13 @@ public abstract class Plugin {
     }
 
     public void toggleVisibleSettings() {
+        PluginWindow.hideWindows();
         isVisibleSettings = !isVisibleSettings;
         windowSettings.setVisible(isVisibleSettings);
     }
 
     public void toggleVisiblePlugins() {
+        PluginWindow.hideWindows();
         isVisiblePlugin = !isVisiblePlugin;
     }
     

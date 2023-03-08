@@ -47,6 +47,8 @@ public class WeakAuras extends Plugin {
         //Build settings window
         getInstance().addWindowPlugins();
         getInstance().addWindowSettings();
+        getInstance().windowPlugin.setVisible(isVisiblePlugin);
+        getInstance().windowSettings.setVisible(isVisibleSettings);
         /*
          * Implement WeakAura subclass here.
          * ie:

@@ -9,3 +9,8 @@
     -fx-font-size: 48;
     -fx-effect: dropshadow(gaussian, #000000, 500, 0, 0, 5);
 }
+
+.sidebarLabel {
+    -fx-text-fill: #E6CA83;
+    -fx-font-size: 16;
+}

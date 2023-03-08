@@ -3,6 +3,7 @@ package elements.skeleton;
 import javafx.scene.layout.HBox;
 import javafx.scene.transform.Rotate;
 import elements.general.ButtonTopbar;
+import elements.general.PluginWindow;
 import elements.resources.Resources;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
@@ -36,7 +37,9 @@ public class Topbar {
             topbarIcons.getChildren().addAll(refresh.getButtonTopbar(), toggleSidebar.getButtonTopbar(), close.getButtonTopbar());
 
             //icons event handling
-            toggleSidebar.getButtonTopbar().setOnMouseClicked(e -> {Sidebar.toggleSidebarVisible();
+            toggleSidebar.getButtonTopbar().setOnMouseClicked(e -> {
+                Sidebar.toggleSidebarVisible();
+                PluginWindow.hideWindows();
                 if (Sidebar.getIsVisible()) {
                     rotate.setAngle(180);
                 } else {

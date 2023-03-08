@@ -1,4 +1,4 @@
-package utils.weakauras;
+package weakauras;
 /*package weakauras;
 
 import javafx.animation.ScaleTransition;
