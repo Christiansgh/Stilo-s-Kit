@@ -20,76 +20,60 @@ public class Icon {
         EMPTY
     }
 
-    public Icon(Type type, char key, char emptyIconCharacter) {
-        this();
-        String activation = "#5ea1c6";
-        String empty = "#E6CA83";
+    public Icon(Type type, String frameColor, char key) {
+        //Build the frame
+        frame = new Rectangle(40, 40, Color.TRANSPARENT);
+        frame.setStrokeWidth(2);
+        frame.setStroke(Color.web(frameColor));
+        frame.setArcHeight(25);
+        frame.setArcWidth(25);
+
+        //Build the inner icon
+        innerIcon = Resources.getIconClose();
+        innerIcon.setRotate(0);
+        innerIcon.setFill(Color.web(frameColor));
+
+        //Build then configure the icon
+        icon = new StackPane(frame, innerIcon);
         switch (type) {
             case ACTIVATION:
-                frame.setStroke(Color.web(activation));
-                innerIcon.setFill(Color.web(activation));
-                getIcon().setOnMouseClicked(e -> {
-                    icon.getChildren().remove(innerIcon);
-                    Label activationKeyChar = new Label(String.valueOf(key));
-                    icon.getChildren().add(activationKeyChar);
-                    activationKeyChar.setStyle("-fx-font-weight: 900; \n -fx-text-fill: #F7F7F7;");
-                    activationKeyChar.setScaleX(2);
-                    activationKeyChar.setScaleY(2);
-                });
+                setListener(this, key, "#F7F7F7");
+                break;
+            
+            case ADD:
+                frame.setStrokeWidth(0);
+                Circle addFrame = new Circle(15, Color.TRANSPARENT);
+                addFrame.setStroke(Color.web(frameColor));
+                addFrame.setStrokeWidth(2);
+                icon.getChildren().addAll(addFrame);
                 break;
 
             case EMPTY:
-                frame.setStroke(Color.web(empty));
-                innerIcon.setFill(Color.web(empty));
-                getIcon().setOnMouseClicked(e -> {
-                    icon.getChildren().remove(innerIcon);
-                    Label activationKeyChar = new Label(String.valueOf(emptyIconCharacter));
-                    icon.getChildren().add(activationKeyChar);
-                    activationKeyChar.setStyle("-fx-font-weight: 900; \n -fx-text-fill: #F7F7F7;");
-                    activationKeyChar.setScaleX(2);
-                    activationKeyChar.setScaleY(2);
-                });
+                setListener(this, key, frameColor);
                 break;
 
-            case ADD:
-                frame.setStroke(Color.TRANSPARENT);
-                innerIcon.setFill(Color.web(activation));
-                Circle add = new Circle(15, Color.TRANSPARENT);
-                add.setStroke(Color.web(activation));
-                add.setStrokeWidth(2);
-                icon.getChildren().add(add);
-                getIcon().setOnMouseClicked(e -> {
-                    icon.getChildren().remove(innerIcon);
-                    Label activationKeyChar = new Label(String.valueOf(emptyIconCharacter));
-                    setKey(emptyIconCharacter);
-                    icon.getChildren().add(activationKeyChar);
-                    activationKeyChar.setStyle("-fx-font-weight: 900; \n -fx-text-fill: #F7F7F7;");
-                    activationKeyChar.setScaleX(2);
-                    activationKeyChar.setScaleY(2);
-                });
             default:
                 break;
         }
     }
-
-    private Icon() {
-        frame = new Rectangle(40, 40, Color.TRANSPARENT);
-        frame.setStrokeWidth(2);
-        frame.setStroke(Color.web("#E6CA83"));
-        frame.setArcHeight(25);
-        frame.setArcWidth(25);
-        innerIcon = Resources.getIconClose();
-        innerIcon.setRotate(0);
-        innerIcon.setFill(Color.web("#E6CA83"));
-        icon = new StackPane(frame, innerIcon);
-    }
-
+    
     public StackPane getIcon() {
         return icon;
     }
 
     public void setKey(char key) {
         this.key = key;
+    }
+
+    private void setListener(Icon icon, char character, String colorHex) {
+        icon.getIcon().setOnMouseClicked(e -> {
+            icon.getIcon().getChildren().remove(innerIcon);
+            Label activationKeyChar = new Label(String.valueOf(character));
+            icon.getIcon().getChildren().add(activationKeyChar);
+            activationKeyChar.setStyle("-fx-font-weight: 900; \n -fx-text-fill: " + colorHex + ";");
+            activationKeyChar.setScaleX(2);
+            activationKeyChar.setScaleY(2);
+        });
     }
 
     @Override
