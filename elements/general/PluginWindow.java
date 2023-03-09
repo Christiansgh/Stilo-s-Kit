@@ -2,6 +2,7 @@ package elements.general;
 
 import java.util.ArrayList;
 
+import elements.plugins.macros.Macro;
 import elements.resources.factories.RectangleFactory;
 import elements.resources.factories.RectangleFactory.rectangles;
 import javafx.geometry.Insets;
@@ -11,6 +12,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
 public class PluginWindow {
@@ -70,6 +72,13 @@ public class PluginWindow {
         HBox rowOne = new HBox();
         ToggleSlider isActiveToggleSlider = new ToggleSlider(rowOne, "Active");
         macrosPluginWindow.addRow(rowOne);
+
+        VBox rowTwo = new VBox();
+        rowTwo.setSpacing(20);
+        Macro macro = new Macro();
+        Macro macro2 = new Macro();
+        rowTwo.getChildren().addAll(macro.getMacro(), macro2.getMacro());
+        macrosPluginWindow.addRow(rowTwo);
 
         macrosPluginWindow.window = new StackPane(RectangleFactory.createRectangle(rectangles.PLUGINWINDOW), macrosPluginWindow.rows);
         return macrosPluginWindow.window;
