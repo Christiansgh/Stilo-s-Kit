@@ -12,8 +12,6 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
 
 public class PluginWindow {
     private static ArrayList <PluginWindow> pluginWindowsList = new ArrayList<PluginWindow>();
@@ -75,8 +73,8 @@ public class PluginWindow {
 
         VBox rowTwo = new VBox();
         rowTwo.setSpacing(20);
-        Macro macro = new Macro();
-        Macro macro2 = new Macro();
+        Macro macro = new Macro('e', '0');
+        Macro macro2 = new Macro('E', 'o');
         rowTwo.getChildren().addAll(macro.getMacro(), macro2.getMacro());
         macrosPluginWindow.addRow(rowTwo);
 
