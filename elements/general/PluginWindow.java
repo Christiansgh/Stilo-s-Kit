@@ -11,6 +11,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.shape.Rectangle;
 
 public class PluginWindow {
     private static ArrayList <PluginWindow> pluginWindowsList = new ArrayList<PluginWindow>();
@@ -54,5 +55,23 @@ public class PluginWindow {
 
         weakAurasPluginWindow.window = new StackPane(RectangleFactory.createRectangle(rectangles.PLUGINWINDOW), weakAurasPluginWindow.rows);
         return weakAurasPluginWindow.window;
+    }
+
+    public static StackPane getMacrosPluginWindow() {
+        PluginWindow macrosPluginWindow = new PluginWindow();
+
+        //add rows & content
+        Label title = new Label("MACROS");
+        title.getStyleClass().add("title");
+        HBox titleRow = new HBox(title);
+        titleRow.setAlignment(Pos.TOP_CENTER);
+        macrosPluginWindow.addRow(titleRow); 
+    
+        HBox rowOne = new HBox();
+        ToggleSlider isActiveToggleSlider = new ToggleSlider(rowOne, "Active");
+        macrosPluginWindow.addRow(rowOne);
+
+        macrosPluginWindow.window = new StackPane(RectangleFactory.createRectangle(rectangles.PLUGINWINDOW), macrosPluginWindow.rows);
+        return macrosPluginWindow.window;
     }
 }

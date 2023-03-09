@@ -21,6 +21,11 @@ public class Resources {
         Image list = new Image("elements/resources/images/list.png", 20, 20, true, true);
         return list;
     }
+
+    public static Image getMacros() {
+        Image image = new Image("elements/resources/images/Macros.png", 20, 20, true, true);
+        return image;
+    }
     
     public static Image getLogo(int sizeX, int sizeY) {
         Image logo = new Image("elements/resources/images/logo.png", 20, 20, true, true);

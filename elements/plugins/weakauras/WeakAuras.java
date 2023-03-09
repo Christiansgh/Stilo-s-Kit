@@ -2,8 +2,6 @@ package elements.plugins.weakauras;
 import api.Plugin;
 import elements.general.PluginWindow;
 import elements.resources.Resources;
-import elements.resources.factories.RectangleFactory;
-import elements.resources.factories.RectangleFactory.rectangles;
 import elements.skeleton.Sidebar;
 import javafx.scene.Node;
 import javafx.scene.image.ImageView;
