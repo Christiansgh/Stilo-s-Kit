@@ -72,7 +72,7 @@ public class PluginWindow {
         macrosPluginWindow.addRow(rowOne);
 
         VBox rowTwo = new VBox();
-        rowTwo.setSpacing(20);
+        rowTwo.setSpacing(40);
         Macro macro = new Macro('e', '0');
         Macro macro2 = new Macro('E', 'o');
         rowTwo.getChildren().addAll(macro.getMacro(), macro2.getMacro());

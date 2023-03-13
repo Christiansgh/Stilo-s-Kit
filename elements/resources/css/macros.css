@@ -1,0 +1,28 @@
+.choice-box .label {
+    -fx-text-fill: white;
+}
+
+.choice-box {
+    -fx-background-color: transparent;
+}
+
+/*Background color of the whole context menu*/
+.choice-box .context-menu { 
+    -fx-background-color: #333333;
+    -fx-border-color: #E6CA83;
+    -fx-border-width: 2;
+}
+/*Focused item background color in the list*/
+.choice-box .menu-item:focused { 
+    -fx-background-color: #E6CA83; 
+}
+/*Text color of non-focused items in the list*/
+.choice-box .menu-item > .label { -fx-text-fill: white; }
+/*Text color of focused item in the list*/
+.choice-box .menu-item:focused > .label { -fx-text-fill: #333333; }
+/*Background color of the control itself*/
+.choice-box {
+  -fx-mark-color: #E6CA83; /*arrow color*/
+}
+/*Selected item text color on the control itself*/
+.choice-box > .label { -fx-text-fill: white; }

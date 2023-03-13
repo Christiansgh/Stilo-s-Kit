@@ -47,6 +47,7 @@ public class Macro {
 
         //build Blue Square
         Icon activationIcon = new Icon(Type.ACTIVATION, "#5ea1c6", activationKey);
+        output.add(activationIcon);
         icons.add(activationIcon.getIcon(), column, row);
 
         //build Blue Circle
@@ -59,7 +60,13 @@ public class Macro {
 
         //Build
         content = new StackPane(frame, icons);
-        content.setOnMouseClicked(e -> System.out.println(output + "Testing purpose. Remove."));
+        content.setOnMouseClicked(e -> {
+            System.out.print("[");
+            for (Icon icon : output) {
+            System.out.print(icon.getKey() + ", ");
+            }
+            System.out.print("] Testing purpose. Remove after.\n");
+        });
     }
     
     public VBox getMacro() {

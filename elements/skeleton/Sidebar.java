@@ -3,7 +3,7 @@ package elements.skeleton;
 import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
-import utils.ScreenBounds;
+import utils.misc.ScreenBounds;
 
 public class Sidebar {
     private static boolean isVisible = true;

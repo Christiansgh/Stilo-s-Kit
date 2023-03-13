@@ -5,7 +5,7 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.control.ScrollPane.ScrollBarPolicy;
 import javafx.scene.layout.StackPane;
 import javafx.scene.shape.Rectangle;
-import utils.ScreenBounds;
+import utils.misc.ScreenBounds;
 
 public class RectangleFactory {
     public enum rectangles {

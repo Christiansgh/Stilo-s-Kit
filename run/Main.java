@@ -1,9 +1,9 @@
 package run;
 
+import initializers.PluginsInitializer;
+import initializers.SkeletonInitializer;
 import javafx.application.Application;
 import javafx.stage.Stage;
-import elements.skeleton.Skeleton;
-import initializers.Initializer;
 
 /*
  * What do we seek:
@@ -122,14 +122,11 @@ public class Main extends Application {
         //sets the background of root as transparrent.
         Application.setUserAgentStylesheet(STYLESHEET_CASPIAN); //change this. its wrong, but it fixed the control whitebackground issue.
 
-        Skeleton.initialize(stage);
-        Initializer.initialize();
-        //run plugin initializer
+        SkeletonInitializer.initialize(stage);
+        PluginsInitializer.initialize();
+        
         //run settings initializer        
 
-        //create the window
-
-        //set initial dimensions
         stage.setMaximized(true);
     }
     

@@ -1,4 +1,4 @@
-package utils;
+package utils.misc;
 
 import javafx.geometry.Rectangle2D;
 import javafx.stage.Screen;

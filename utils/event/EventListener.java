@@ -1,7 +1,7 @@
 package utils.event;
 
 import javafx.util.Duration;
-import utils.RobotController;
+import utils.misc.RobotController;
 
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;

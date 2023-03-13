@@ -7,7 +7,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import utils.ScreenBounds;
+import utils.misc.ScreenBounds;
 
 public class Skeleton {
     private static AnchorPane root = null;
@@ -25,24 +25,5 @@ public class Skeleton {
             AnchorPane.setBottomAnchor(Sidebar.getInstance(), 0.0);
         }
         return root;
-    }
-
-    public static void initialize(Stage stage) {
-        stage = new Stage(StageStyle.UNDECORATED);
-
-        // set the app name
-        stage.setTitle("Stilo's Kit");
-
-        stage.getIcons().add(Resources.getLogoApplication(20, 20));
-
-        stage.setAlwaysOnTop(true);
-
-        // make scene. Set nonsidebar content as invisible.
-        Scene scene = new Scene(Skeleton.getInstance());
-        scene.setFill(Color.TRANSPARENT);
-        stage.initStyle(StageStyle.TRANSPARENT);
-
-        stage.setScene(scene);
-        stage.show();
     }
 } 

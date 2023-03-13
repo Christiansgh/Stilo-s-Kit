@@ -2,6 +2,7 @@ package elements.skeleton;
 
 import javafx.scene.layout.HBox;
 import javafx.scene.transform.Rotate;
+import utils.misc.ScreenBounds;
 import elements.general.ButtonTopbar;
 import elements.general.PluginWindow;
 import elements.resources.Resources;
@@ -9,7 +10,6 @@ import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import utils.ScreenBounds;
 
 public class Topbar {
     private static HBox topbarActivePlugins;
